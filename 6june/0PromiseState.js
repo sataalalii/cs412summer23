@@ -1,3 +1,4 @@
+//Promises have three states: Pending (waiting), Resolved (no errs), Reject (err)
 let resolvedPromise = Promise.resolve("Resolved!");
 let rejectedPromise = Promise.reject("Rejected!");
 

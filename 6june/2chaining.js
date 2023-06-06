@@ -5,8 +5,9 @@ function promiseFunction(value) {
         }, 2000);
     });
 }
-
+//no rejects, just resolves
 promiseFunction(2)
     .then(value => promiseFunction(value))
-    .then(value => console.log(value))  // Logs 8
+    .then(value => console.log(value))// Logs 8
+    .finally(() => console.log(`Done in Promise`))
     .catch(error => console.log(error));

@@ -1,5 +1,4 @@
 const https = require('https');
-
 const options = {
     hostname: 'postman-echo.com',
     path: '/get?test=123',
@@ -30,7 +29,7 @@ async function getRequest(options) {
 
 async function callAPI() {
     try {
-        const response = await getRequest(options);
+        const response = await getRequest(options); //await is like a direct resolve
         console.log(response);
     } catch (error) {
         console.error('Error:', error);
