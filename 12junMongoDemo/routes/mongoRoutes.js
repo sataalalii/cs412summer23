@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const db = require('../mongoCx');
 
-router.route('/')
+router.route('/') //RESTful, so CREATE = POST
     .post(async (req, res) => {
     let mongo = await db.getDB('cs412');
     let results = await mongo.collection('sum23names').insertOne(req.body);
@@ -18,7 +18,7 @@ router.route('/')
             res.json(results);
         }
     })
-
+//use named parameter :name
     router.get('/:name', async (req, res) => {
         let mongo = await db.getDB('cs412');
         let results = await mongo.collection('sum23names').find({name: req.params.name}).toArray();
