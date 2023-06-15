@@ -42,4 +42,6 @@ const child = new ChildClass();
 console.log(`--------child--------`);
 console.log(child.publicVar); // Output: public
 console.log(child.getPrivateVar()); // Output: private
-console.log(child.getProtectedVar()); // Output: protected
+console.log('protected from child: ' + child.getProtectedVar()); // Output: protected
+//child.privateVar = '5';
+//child.protectedVar = '5';

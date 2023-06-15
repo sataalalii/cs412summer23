@@ -18,7 +18,7 @@ class theReport extends theDocument implements Printable {
     content: string;
 
     constructor(title: string, content: string) {
-        super(title);
+        super(title); //super = the parent
         this.content = content;
     }
 
