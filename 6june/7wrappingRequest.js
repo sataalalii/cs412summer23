@@ -7,7 +7,7 @@ const options = {
 };
 
 async function getRequest(options) {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => { // wrapping old code in Promise
         const req = https.request(options, res => {
             let data = '';
 
@@ -30,7 +30,7 @@ async function getRequest(options) {
 
 async function callAPI() {
     try {
-        const response = await getRequest(options);
+        const response = await getRequest(options); // await keyword is like a direct resolve instead of .then()
         console.log(response);
     } catch (error) {
         console.error('Error:', error);

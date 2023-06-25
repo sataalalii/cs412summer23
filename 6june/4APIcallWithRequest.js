@@ -9,10 +9,10 @@ const options = {
 
 const req = https.request(options, res => {
     let data = '';
-    res.on('data', chunk => {
+    res.on('data', chunk => { // on "data" command -- pull chunks.
         data += chunk;
     });
-    res.on('end', () => {
+    res.on('end', () => { // on "end" command -- parse
         console.log(JSON.parse(data));
     });
 });
