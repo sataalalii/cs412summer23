@@ -12,6 +12,8 @@ let promise3 = new Promise((resolve, reject) => {
 
 Promise.all([promise1, promise2, promise3]) // promise-based functions simultaneously -- waits for all to come back.
     .then(values => console.log(`ALL: values: ${values}`))  // Logs ["one", "two", "three"]
+// Promise.waterfall([promise1, promise2, promise3]) //from async.io package on npmjs.org
+//     .then(values => console.log(`ALL: values: ${values}`))  // Logs ["one", "two", "three"]
 
 
 // Scenario in which to use race: Fastest response of servers to API call; don't care which server it is.
